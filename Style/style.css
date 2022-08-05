@@ -1,0 +1,399 @@
+@charset "UTF-8";
+/* Universal Selector */
+div.animation {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(96, 5, 112);
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  opacity: 1;
+}
+div.animation div.logo {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+div.animation div.logo section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+div.animation div.logo section div.firstname {
+  margin: 0 3rem 0 0;
+}
+div.animation div.logo svg {
+  text-align: center;
+  height: 150px;
+  -webkit-animation: fill 0.6s ease-in forwards 2.1s;
+          animation: fill 0.6s ease-in forwards 2.1s;
+}
+div.animation div.logo svg path {
+  stroke-width: 1;
+}
+
+#first {
+  stroke-dasharray: 347px;
+  stroke-dashoffset: 347px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards;
+          animation: fadeInside 0.6s ease-in forwards;
+}
+
+#second {
+  stroke-dasharray: 298px;
+  stroke-dashoffset: 298px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 0.3s;
+          animation: fadeInside 0.6s ease-in forwards 0.3s;
+}
+
+#third {
+  stroke-dasharray: 331px;
+  stroke-dashoffset: 331px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 0.6s;
+          animation: fadeInside 0.6s ease-in forwards 0.6s;
+}
+
+#fourth {
+  stroke-dasharray: 182px;
+  stroke-dashoffset: 182px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 0.9s;
+          animation: fadeInside 0.6s ease-in forwards 0.9s;
+}
+
+#fifth {
+  stroke-dasharray: 373px;
+  stroke-dashoffset: 373px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 1.2s;
+          animation: fadeInside 0.6s ease-in forwards 1.2s;
+}
+
+#sixth {
+  stroke-dasharray: 299px;
+  stroke-dashoffset: 299px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 1.5s;
+          animation: fadeInside 0.6s ease-in forwards 1.5s;
+}
+
+#seventh {
+  stroke-dasharray: 290px;
+  stroke-dashoffset: 290px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 1.8s;
+          animation: fadeInside 0.6s ease-in forwards 1.8s;
+}
+
+#eighth {
+  stroke-dasharray: 395px;
+  stroke-dashoffset: 395px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 2.1s;
+          animation: fadeInside 0.6s ease-in forwards 2.1s;
+}
+
+#nineth {
+  stroke-dasharray: 884px;
+  stroke-dashoffset: 884px;
+  -webkit-animation: fadeInside 0.8s ease-in forwards 0s;
+          animation: fadeInside 0.8s ease-in forwards 0s;
+}
+
+#tenth {
+  stroke-dasharray: 820px;
+  stroke-dashoffset: 820px;
+  -webkit-animation: fadeInside 0.9s ease-in forwards 0.9s;
+          animation: fadeInside 0.9s ease-in forwards 0.9s;
+}
+
+#eleventh {
+  stroke-dasharray: 792px;
+  stroke-dashoffset: 792px;
+  -webkit-animation: fadeInside 0.9s ease-in forwards 1.8s;
+          animation: fadeInside 0.9s ease-in forwards 1.8s;
+}
+
+@media screen and (max-width: 700px) {
+  div.animation div.logo section div.firstname {
+    margin: 0;
+  }
+}
+@-webkit-keyframes fadeInside {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes fadeInside {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+@-webkit-keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: rgb(96, 5, 112);
+}
+*::-moz-selection {
+  background-color: rgb(16, 193, 193);
+}
+*::selection {
+  background-color: rgb(16, 193, 193);
+}
+
+/* jump to bookmark smoothly */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+/* overview setting */
+nav {
+  /* border: 1px solid rgb(96, 5, 112); */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-family: Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serify;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+  background-color: rgb(96, 5, 112);
+  /* deal with the gap between child block with inline-block */
+}
+nav ul li {
+  /* flex:grow shrink basis */
+  flex: 1 1 content;
+  list-style-type: none;
+  z-index: 2;
+  text-align: center;
+}
+nav ul li a {
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  color: white;
+  text-decoration: none;
+}
+nav ul li:hover {
+  background-color: rgb(16, 193, 193);
+}
+nav ul li:hover a {
+  color: rgb(96, 5, 112);
+}
+nav ul li.active {
+  background-color: rgb(16, 193, 193);
+}
+nav ul li.active a {
+  color: rgb(96, 5, 112);
+}
+
+main {
+  text-align: center;
+}
+main header h1 {
+  margin: 1rem;
+  font-weight: bold;
+  font-family: Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serify;
+  transition: font-size 0.25s;
+}
+main header h1:hover {
+  font-size: 3rem;
+}
+main header div.img {
+  width: 100%;
+  height: 240px;
+  text-align: center;
+  background: url("../images/Identification.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: height 0.5s;
+}
+main header div.img:hover {
+  height: 300px;
+}
+main header div.inf {
+  display: none;
+  width: 100%;
+}
+main header div.inf p {
+  font-family: Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serify;
+  font-size: 1.5rem;
+  margin: 5px;
+}
+main h2,
+main hr {
+  margin: 1rem;
+}
+main h2 {
+  transition: font-size 0.25s;
+}
+main h2:hover {
+  font-size: 2rem;
+}
+main h2::first-letter {
+  font-size: 2rem;
+}
+main ul.outside {
+  width: 100%;
+  margin: 0px 10vw;
+}
+main ul.inside {
+  margin: 0 2vw;
+}
+main div.inner {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+main section.EDUCATION ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+main section.EDUCATION ul li {
+  margin: 1vh 0;
+}
+main section.EDUCATION ul li i {
+  font-size: 0.8rem;
+}
+main section.PERSONAL div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 10vw;
+}
+main section.PERSONAL div img {
+  flex: 1 1 250px;
+  padding: 5vh 5vw;
+  width: 30%;
+  min-height: 200px;
+}
+main section.OTHERS div {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: 5vh;
+}
+main section.OTHERS div a {
+  margin: 2vh 0;
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(96, 5, 112);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer h1 {
+  margin: 1rem;
+  color: white;
+  font-family: Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serify;
+  text-align: center;
+}
+footer div.nav {
+  margin: 5vh 20vw 0 20vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+footer div.nav ul.logo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: space-around;
+}
+footer div.nav ul.logo li a {
+  font-family: Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serify;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1rem;
+  padding: 2rem 0rem;
+  color: white;
+  text-decoration: none;
+}
+footer div.nav ul.logo li a:hover {
+  color: rgba(0, 255, 255, 0.929);
+}
+footer section {
+  margin: 5vh 5vw;
+}
+footer section a {
+  margin: 0 1vw;
+}
+footer section a img:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+footer section div {
+  opacity: 50%;
+  color: white;
+  position: relative;
+  left: 10%;
+}
+footer div.right p {
+  font-family: Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serify;
+  color: white;
+  height: 3rem;
+  margin-bottom: 5vh;
+}
+
+li {
+  white-space: normal;
+  /* word-break: break-all; */
+  word-wrap: break-word;
+}
+
+.largeText {
+  font-size: 2rem;
+}
+
+/* attribute selector */
+input[type=text]:active {
+  color: chocolate;
+}
+
+/* action setting */
+/* h2:hover::before {
+      content: "⭐";
+    } */
+@media screen and (max-width: 700px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li a {
+    line-height: 0.5rem;
+    padding: 0rem;
+    font-size: 0.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */

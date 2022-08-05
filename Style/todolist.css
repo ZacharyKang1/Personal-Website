@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i {
+  pointer-events: none;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  z-index: -1;
+  background: linear-gradient(-40deg, rgb(96, 5, 112), rgb(16, 193, 193));
+}
+
+header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+section.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20vw 0 20vw;
+}
+section.form form {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.form form input[type=text] {
+  margin: 0.1rem;
+  border: none;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  flex: 3 1 20px;
+  width: 40%;
+}
+section.form form input[type=number] {
+  margin: 0.1rem;
+  border: none;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  flex: 1 1 10px;
+  width: 20%;
+}
+section.form form button {
+  flex: 1 1 10px;
+  border: none;
+  margin: 0.1rem;
+  border: none;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  background-color: rgb(16, 193, 193);
+  color: rgb(96, 5, 112);
+}
+section.form form button:hover {
+  opacity: 0.8;
+}
+
+div.sort {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+div.sort button {
+  text-shadow: 2rem;
+  margin: 0.1rem;
+  border: none;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  box-shadow: 3px 3px 4px 1px rgb(16, 193, 193);
+  cursor: pointer;
+  background-color: rgb(96, 5, 112);
+  color: white;
+}
+div.sort button:hover {
+  opacity: 0.8;
+}
+div.sort input {
+  color: rgb(16, 193, 193);
+  margin-left: 1rem;
+  margin-right: 0.2rem;
+}
+div.sort label {
+  font-size: 0.8rem;
+  color: white;
+}
+
+section.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.list div.todo {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  transition: all 0.15s ease;
+}
+section.list div.todo p {
+  word-wrap: break-word;
+  color: rgb(96, 5, 112);
+  background-color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+}
+section.list div.todo p.todo-text {
+  width: 50vw;
+}
+section.list div.todo p.todo-time {
+  width: 10vw;
+}
+section.list div.todo button {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  color: rgb(96, 5, 112);
+  background-color: rgb(16, 193, 193);
+}
+section.list div.todo button:hover {
+  opacity: 0.8;
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  -webkit-text-decoration-color: rgb(16, 193, 193);
+          text-decoration-color: rgb(16, 193, 193);
+  text-decoration-thickness: 0.1rem;
+}
+
+@-webkit-keyframes listScaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes listScaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes listScaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes listScaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@media screen and (max-width: 900px) {
+  section.form {
+    margin: 0;
+  }
+  section.list div.todo {
+    width: 80%;
+  }
+}/*# sourceMappingURL=todolist.css.map */
