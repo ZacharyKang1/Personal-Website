@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEATHER | <%= data.name%> (<%= data.sys.country%>)</title>
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="The weather application using openWeatherAPI."
+    />
+    <link rel="stylesheet" href="./application/weather.css" />
+  </head>
+  <body>
+    <h1><%= data.name%> Weather</h1>
+    <table>
+      <tr>
+        <td>Main Weather</td>
+        <td><%= data.weather[0].main%></td>
+      </tr>
+      <tr>
+        <td>Weather description</td>
+        <td><%= data.weather[0].description%></td>
+      </tr>
+      <tr>
+        <td>Temperature:</td>
+        <td><%= newTemp%>℃</td>
+      </tr>
+    </table>
+  </body>
+</html>
