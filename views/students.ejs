@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Page</title>
+    <title>Students List | MongoDB</title>
   </head>
   <body>
     <ul>
       <% data.forEach(student =>{ %>
-      <li><%= student.name%></li>
+      <li><a href="/student/<%= student.id %>"><%= student.name%></a></li>
       <% }) %>
     </ul>
   </body>

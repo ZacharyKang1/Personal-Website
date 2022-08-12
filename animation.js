@@ -11,6 +11,7 @@ const lastWord = document.querySelector("#eleventh");
 // console.log(lastWord);
 const animation = document.querySelector("div.animation");
 // console.log(animation.style);
+//make the animation page disappeared
 lastWord.addEventListener("animationend", () => {
   animation.style =
     "transition: all 1.5s ease; opacity: 0; pointer-events: none;";
